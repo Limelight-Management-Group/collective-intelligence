@@ -1,0 +1,1 @@
+I got this, whordie/wody/whoaday! How do you spell it?? Fuck it. Who cares; there is no real correct way to spell a slang. Wouldn't that defeat the purpose?
