@@ -7,18 +7,26 @@ var util = require('util');
 var fs = require('fs');
 var http = require('http')
 
-
-
-
 var server = http.createServer(function(req, res){
 	console.log('request was made' + req.url);
-	res.writeHead(200, {'Content-Type': 'application/json'});
-	var obj = {
-		name: 'Wayne',
-		age: 'Golden',
-		job: 'Benevolent King'
-	};
-	res.end('King Weezy in this theezy');
+	// res.writeHead(200, {'Content-Type': 'application/json'});
+
+	// res.end('King Weezy in this theezy');
+
+	if(req.url === '/home' || req.url === '/'){
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		fs.createReadStream(__dirname + '/index.html', 'utf8').pipe(res);
+	} else if(req.url === '/contact'){
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		fs.createReadStream(__dirname + '/contact.html', 'utf8').pipe(res);
+	} else if(req.url === '/api/music'){
+		var music = [{Artist_name: 'Zay', Genre: 'R&B', Talent: 'Vocalist', Site: 'https://tllis.net', Location: 'Atlanta, Ga.'}]
+		res.writeHead(200, {'Content-Type': 'application/json'});
+		res.end(JSON.stringify(music));
+	} else {
+		res.writeHead(404, {'Content-Type': 'text/html'});
+		fs.createReadStream(__dirname + '/404.html', 'utf8').pipe(res);
+	}
 
 	// var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
 	// // var myWriteSream = fs.createWriteStream(__dirname + '/writeMe.txt');
