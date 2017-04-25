@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TaskR</title>
+</head>
+<body>
+<% include partials/nav.ejs %>
+<h1>
+Profile <br>
+Welcome to your profile of <%= person %>. This was a long time coming, buddy!!
+</h1>
+<br><br><br>
+<p>
+<h3>Location: <%= data.Location %></h3>
+<br>
+<h3>Talent: <%= data.Talent %></h3>
+<br>
+<h3>Genre: <%= data.Genre %></h3>
+
+</p>
+<h2>limelight</h2>
+<ul>
+	<% data.limelight.forEach(function(item){ %>
+
+		<li><%= item %></li>
+
+	<%}); %>
+</ul>
+</body>
+</html>

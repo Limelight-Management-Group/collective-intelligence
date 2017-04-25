@@ -1,0 +1,23 @@
+{
+  "name": "collective-intelligence",
+  "version": "1.0.0",
+  "description": "Getter Done",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limelight-Management-Group/collective-intelligence.git"
+  },
+  "author": "KW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Limelight-Management-Group/collective-intelligence/issues"
+  },
+  "homepage": "https://github.com/Limelight-Management-Group/collective-intelligence#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
